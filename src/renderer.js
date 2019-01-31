@@ -57,6 +57,10 @@ export class PromiseIpcRenderer {
         });
     });
   }
+  
+  off(route) {
+    return ipcRenderer.removeAllListeners(route);
+  }
 }
 
 export const PromiseIpc = PromiseIpcRenderer;

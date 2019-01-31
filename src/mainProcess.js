@@ -58,6 +58,10 @@ export class PromiseIpcMain {
         });
     });
   }
+
+  off(route) {
+    return ipcMain.removeAllListeners(route);
+  }
 }
 
 export const PromiseIpc = PromiseIpcMain;
